@@ -74,11 +74,6 @@ resource "aws_lb_target_group" "this" {
       "health_check_unhealthy_threshold",
       var.target_groups_defaults["health_check_unhealthy_threshold"],
     )
-    timeout = lookup(
-      var.target_groups[count.index],
-      "health_check_timeout",
-      var.target_groups_defaults["health_check_timeout"],
-    )
     protocol = upper(
       lookup(
         var.target_groups[count.index],

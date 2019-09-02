@@ -43,7 +43,6 @@ module "nlb" {
 | ip\_address\_type | The type of IP addresses used by the subnets for your load balancer. The possible values are ipv4 and dualstack. | string | `"ipv4"` | no |
 | listeners | A list of maps describing the listeners for this NLB | list(map(string)) | `<list>` | no |
 | name | Load balancer name | string | n/a | yes |
-| protocol | Load balancer name | string | n/a | yes |
 | subnet\_ids | Subnet IDs to create load balancer in | list | n/a | yes |
 | tags | A map of tags to add to all resources | map | `<map>` | no |
 | target\_groups | Subnet IDs to create load balancer in | list(map(string)) | `<list>` | no |

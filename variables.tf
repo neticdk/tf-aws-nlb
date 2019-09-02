@@ -69,7 +69,6 @@ variable "target_groups_defaults" {
       deregistration_delay             = string,
       health_check_healthy_threshold   = string,
       health_check_port                = string,
-      health_check_timeout             = string,
       health_check_unhealthy_threshold = string,
       target_type                      = string,
       slow_start                       = string,
@@ -80,7 +79,6 @@ variable "target_groups_defaults" {
     deregistration_delay             = 300
     health_check_healthy_threshold   = 3
     health_check_port                = "traffic-port"
-    health_check_timeout             = 5
     health_check_unhealthy_threshold = 3
     target_type                      = "instance"
     slow_start                       = 0
