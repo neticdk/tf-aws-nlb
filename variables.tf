@@ -69,6 +69,7 @@ variable "target_groups_defaults" {
       deregistration_delay             = string,
       health_check_healthy_threshold   = string,
       health_check_port                = string,
+      health_check_timeout             = string,
       health_check_unhealthy_threshold = string,
       target_type                      = string,
       slow_start                       = string,
