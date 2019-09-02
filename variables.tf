@@ -67,10 +67,8 @@ variable "target_groups_defaults" {
     {
       cookie_duration                  = string,
       deregistration_delay             = string,
-      health_check_interval            = string,
       health_check_healthy_threshold   = string,
       health_check_port                = string,
-      health_check_timeout             = string,
       health_check_unhealthy_threshold = string,
       target_type                      = string,
       slow_start                       = string,
@@ -79,7 +77,6 @@ variable "target_groups_defaults" {
   default = {
     cookie_duration                  = 86400
     deregistration_delay             = 300
-    health_check_interval            = 10
     health_check_healthy_threshold   = 3
     health_check_port                = "traffic-port"
     health_check_timeout             = 5

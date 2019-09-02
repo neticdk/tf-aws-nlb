@@ -59,11 +59,6 @@ resource "aws_lb_target_group" "this" {
   )
 
   health_check {
-    interval = lookup(
-      var.target_groups[count.index],
-      "health_check_interval",
-      var.target_groups_defaults["health_check_interval"],
-    )
     port = lookup(
       var.target_groups[count.index],
       "health_check_port",
