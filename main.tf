@@ -108,14 +108,14 @@ resource "aws_lb_target_group" "this" {
 }
 
 resource "aws_lb_listener" "this" {
-  count = length(var.http_tcp_listeners)
+  count = length(var.listeners)
 
   load_balancer_arn = aws_lb.this.arn
-  port              = var.http_tcp_listeners[count.index]["port"]
-  protocol          = upper(var.http_tcp_listeners[count.index]["protocol"])
+  port              = var.listeners[count.index]["port"]
+  protocol          = upper(var.listeners[count.index]["protocol"])
 
   default_action {
-    target_group_arn = aws_lb_target_group.this[lookup(var.http_tcp_listeners[count.index], "target_group_index", 0)].id
+    target_group_arn = aws_lb_target_group.this[lookup(var.listeners[count.index], "target_group_index", 0)].id
     type             = "forward"
   }
 }
