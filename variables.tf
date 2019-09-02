@@ -25,11 +25,6 @@ variable "subnet_ids" {
   type        = list
 }
 
-variable "protocol" {
-  description = "Load balancer name"
-  type        = string
-}
-
 variable "internal" {
   description = "If true, the LB will be internal"
   type        = bool
